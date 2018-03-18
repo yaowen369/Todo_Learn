@@ -212,7 +212,7 @@ public class TasksRepository implements TasksDataSource{
     public void deleteAllTasks() {
         mTasksRemoteDataSource.deleteAllTasks();
         mTasksLocalDataSource.deleteAllTasks();
-        
+
         createCacheTasksIfNull();
         mCachedTasks.clear();
     }
