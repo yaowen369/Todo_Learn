@@ -110,4 +110,18 @@ public class TasksRemoteDataSource implements TasksDataSource{
     }
 
 
+    @Override
+    public void refreshTasks() {
+        //{@link TasksRepository} 中已经做了相应的处理了
+    }
+
+    @Override
+    public void deleteAllTasks() {
+        TASKS_SERICE_DATA.clear();
+    }
+
+    @Override
+    public void deleteTask(@NonNull String taskId) {
+        TASKS_SERICE_DATA.remove(taskId);
+    }
 }
