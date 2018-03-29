@@ -13,6 +13,7 @@ import android.view.MenuItem;
 
 import com.yaoxiaowen.todo_learn.Injection;
 import com.yaoxiaowen.todo_learn.R;
+import com.yaoxiaowen.todo_learn.statistics.StatisticsActivity;
 import com.yaoxiaowen.todo_learn.util.ActivityUtils;
 
 public class TasksActivity extends AppCompatActivity {
@@ -90,10 +91,9 @@ public class TasksActivity extends AppCompatActivity {
                                 // Do nothing, we're already on that screen
                                 break;
                             case R.id.statistics_navigation_menu_item:
-                                //Todo 静态统计页面还没有完善
-//                                Intent intent =
-//                                        new Intent(TasksActivity.this, StatisticsActivity.class);
-//                                startActivity(intent);
+                                Intent intent =
+                                        new Intent(TasksActivity.this, StatisticsActivity.class);
+                                startActivity(intent);
                                 break;
                                 default:
                                     break;
