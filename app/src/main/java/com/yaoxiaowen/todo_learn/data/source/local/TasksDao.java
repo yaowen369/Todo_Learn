@@ -42,7 +42,7 @@ public interface TasksDao {
      * @param taskId
      * @param completed
      */
-    @Query("UPDATE tasks SET completed = :completed WHERE entryid = :taskid")
+    @Query("UPDATE tasks SET completed = :completed WHERE entryid = :taskId")
     void updateCompleted(String taskId, boolean completed);
 
     @Query("DELETE FROM Tasks WHERE entryid = :taskId")

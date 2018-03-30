@@ -24,7 +24,9 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.yaoxiaowen.todo_learn.R;
+import com.yaoxiaowen.todo_learn.addedittask.AddEditTaskActivity;
 import com.yaoxiaowen.todo_learn.data.Task;
+import com.yaoxiaowen.todo_learn.taskdetail.TaskDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -99,8 +101,7 @@ public class TasksFragment extends Fragment implements TasksContract.View{
         mNoTaskAddView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Todo 这个屏蔽语句要去掉，应该还要添加 数据
-//                showAddTask();
+                showAddTask();
             }
         });
 
@@ -288,10 +289,8 @@ public class TasksFragment extends Fragment implements TasksContract.View{
 
     @Override
     public void showAddTask() {
-//        AddEditTaskActivity 还没有写，Todo 待实现之后，这里要放开屏蔽
-
-//        Intent intent = new Intent(getContext(), AddEditTaskActivity.class);
-//        startActivityForResult(intent, AddEditTaskActivity.REQUEST_ADD_TASK);
+        Intent intent = new Intent(getContext(), AddEditTaskActivity.class);
+        startActivityForResult(intent, AddEditTaskActivity.REQUEST_ADD_TASK);
     }
 
 
@@ -299,10 +298,9 @@ public class TasksFragment extends Fragment implements TasksContract.View{
     public void showTaskDetailsUi(String taskId) {
         // in it's own Activity, since it makes more sense that way and it gives us the flexibility
         // to show some Intent stubbing.
-        //Todo 等待完成之后，这块要放开屏蔽
-//        Intent intent = new Intent(getContext(), TaskDetailActivity.class);
-//        intent.putExtra(TaskDetailActivity.EXTRA_TASK_ID, taskId);
-//        startActivity(intent);
+        Intent intent = new Intent(getContext(), TaskDetailActivity.class);
+        intent.putExtra(TaskDetailActivity.EXTRA_TASK_ID, taskId);
+        startActivity(intent);
     }
 
 

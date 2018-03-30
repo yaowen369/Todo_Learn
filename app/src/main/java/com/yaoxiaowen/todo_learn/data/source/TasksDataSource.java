@@ -14,7 +14,6 @@ import java.util.List;
 
 public interface TasksDataSource {
 
-    //Todo 这两个接口的作用，还暂时不知道
     interface LoadTasksCallBack{
         void onTasksLoaded(List<Task> tasks);
         void onDataNotAvailable();
