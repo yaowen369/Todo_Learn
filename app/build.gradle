@@ -32,6 +32,8 @@ dependencies {
     compile "com.google.guava:guava:$rootProject.guavaVersion"
     compile "android.arch.persistence.room:runtime:$rootProject.roomVersion"
     annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
+
+    testCompile "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
 }
 
 
